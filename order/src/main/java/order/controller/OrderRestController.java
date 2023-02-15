@@ -5,7 +5,6 @@ import order.model.Order;
 import order.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -16,7 +15,6 @@ import java.util.Optional;
 @RequestMapping("/api")
 public class OrderRestController {
     private final OrderService orderService;
-    private KafkaTemplate<Integer, Order> kafkaTemplate;
 
     @GetMapping("/{id}")
     public ResponseEntity<Order> getOrder(@PathVariable("id") int id) {
@@ -24,7 +22,6 @@ public class OrderRestController {
         if (order.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
         }
-        kafkaTemplate.send("order", order.get());
         return new ResponseEntity<>(order.get(), HttpStatus.OK);
     }
 
