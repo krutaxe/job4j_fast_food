@@ -1,6 +1,6 @@
 package order.config;
 
-import order.model.Order;
+import domain.model.Order;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.IntegerSerializer;
 import org.springframework.beans.factory.annotation.Value;

@@ -1,12 +1,14 @@
-package model;
+package domain.model;
 
 import lombok.Data;
 
 import java.util.List;
 
 @Data
-public class Message {
+public class Delivery {
     private int id;
-    private String message;
+    private List<Order> orders;
     private List<Customer> customers;
+    private boolean isDelivered;
+
 }

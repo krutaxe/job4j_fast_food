@@ -1,4 +1,4 @@
-package order.model;
+package domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -19,21 +19,14 @@ public class Order {
     @EqualsAndHashCode.Include
     private int id;
 
-    /**
-    @ManyToOne
-    @JoinColumn(name = "customer_id")
-    private Customer customer;
-
-    @OneToMany
-    @JoinColumn
-    private List<Dish> dishes;
-    */
-
     @Column(name = "total_price")
     private int totalPrice;
 
     @Column(name = "is_paid")
     private boolean isPaid;
+
+    @Column(name = "status_order")
+    private StatusOrder statusOrder;
 
     @Override
     public String toString() {

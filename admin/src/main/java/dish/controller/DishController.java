@@ -1,7 +1,7 @@
 package dish.controller;
 
 import lombok.AllArgsConstructor;
-import model.Dish;
+import domain.model.Dish;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;

@@ -1,8 +1,8 @@
 package notification.service;
 
+import domain.model.Notification;
+import domain.model.Order;
 import lombok.AllArgsConstructor;
-import notification.dto.Order;
-import notification.model.Notification;
 import notification.repository.NotificationRepository;
 import org.springframework.kafka.annotation.KafkaListener;
 import org.springframework.stereotype.Service;
@@ -14,7 +14,7 @@ public class NotificationServiceImpl implements NotificationService {
 
     @Override
     @KafkaListener(topics = "order", groupId = "app.1")
-    public void sendOrder(Order order) {
+    public void acceptOrder(Order order) {
         Notification notification = new Notification();
         notification.setOrderId(order.getId());
         notification.setTotalPriceOrder(order.getTotalPrice());

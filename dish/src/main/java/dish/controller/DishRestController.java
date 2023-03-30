@@ -1,7 +1,7 @@
 package dish.controller;
 
-import dish.model.Dish;
 import dish.service.DishService;
+import domain.model.Dish;
 import lombok.AllArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

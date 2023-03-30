@@ -1,7 +1,8 @@
 package notification.service;
 
-import notification.dto.Order;
+import domain.model.Notification;
+import domain.model.Order;
 
 public interface NotificationService {
-   void sendOrder(Order order);
+   void acceptOrder(Order order);
 }

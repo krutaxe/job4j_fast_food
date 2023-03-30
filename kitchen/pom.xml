@@ -42,6 +42,28 @@
             <version>4.17.2</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.kafka</groupId>
+            <artifactId>spring-kafka</artifactId>
+        </dependency>
+
     </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.liquibase</groupId>
+                <artifactId>liquibase-maven-plugin</artifactId>
+                <version>4.15.0</version>
+                <configuration>
+                    <changeLogFile>src/main/resources/liquibase-changeLog.xml</changeLogFile>
+                    <driver>org.postgresql.Driver</driver>
+                    <url>jdbc:postgresql://localhost:5432/fast_food</url>
+                    <username>postgres</username>
+                    <password>postgres</password>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>

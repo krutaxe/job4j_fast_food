@@ -1,4 +1,4 @@
-package dish.model;
+package domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -22,6 +22,6 @@ public class Dish {
 
     private String name;
 
+    @Column(name = "price_dish")
     private int priceDish;
-
 }

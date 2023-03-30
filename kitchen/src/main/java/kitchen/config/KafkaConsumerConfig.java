@@ -1,4 +1,4 @@
-package notification.config;
+package kitchen.config;
 
 import domain.model.Order;
 import org.apache.kafka.clients.consumer.ConsumerConfig;

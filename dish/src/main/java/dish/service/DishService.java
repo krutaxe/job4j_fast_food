@@ -1,6 +1,6 @@
 package dish.service;
 
-import dish.model.Dish;
+import domain.model.Dish;
 
 import java.util.List;
 import java.util.Optional;

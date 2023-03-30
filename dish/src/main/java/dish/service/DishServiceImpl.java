@@ -1,7 +1,7 @@
 package dish.service;
 
-import dish.model.Dish;
 import dish.repository.DishRepository;
+import domain.model.Dish;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 

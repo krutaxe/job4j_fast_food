@@ -1,7 +1,7 @@
 package order.controller;
 
+import domain.model.Order;
 import lombok.AllArgsConstructor;
-import order.model.Order;
 import order.service.OrderService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

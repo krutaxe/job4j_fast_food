@@ -1,5 +1,4 @@
-package notification.model;
-
+package domain.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -12,9 +11,9 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Table(name = "notification")
+@Table(name = "kitchen")
 @EqualsAndHashCode(onlyExplicitlyIncluded = true)
-public class Notification {
+public class Kitchen {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @EqualsAndHashCode.Include
@@ -23,8 +22,8 @@ public class Notification {
     @Column(name = "order_id")
     private int orderId;
 
-    @Column(name = "total_price_order")
-    private int totalPriceOrder;
+    @Column(name = "status_order")
+    private StatusOrder statusOrder;
 
     @Column(name = "is_paid_order")
     private boolean isPaidOrder;
