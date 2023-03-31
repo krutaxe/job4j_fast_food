@@ -14,6 +14,6 @@ public interface OrderService {
 
     List<Order> getAll();
 
-    void acceptOrder(String msg);
+    void acceptOrder(Order order);
 
 }

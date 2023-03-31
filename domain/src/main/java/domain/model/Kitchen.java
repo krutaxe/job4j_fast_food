@@ -27,4 +27,14 @@ public class Kitchen {
 
     @Column(name = "is_paid_order")
     private boolean isPaidOrder;
+
+    @Override
+    public String toString() {
+        return "Kitchen{"
+                + "id=" + id
+                + ", orderId=" + orderId
+                + ", statusOrder=" + statusOrder
+                + ", isPaidOrder=" + isPaidOrder
+                + '}';
+    }
 }

@@ -30,9 +30,11 @@ public class Order {
 
     @Override
     public String toString() {
-        return String.format("Order(id=%s ,totalPrice=%s ,isPaid=%s)",
-                this.id,
-                this.totalPrice,
-                this.isPaid);
+        return "Order{"
+                + "id=" + id
+                + ", totalPrice=" + totalPrice
+                + ", isPaid=" + isPaid
+                + ", statusOrder=" + statusOrder
+                + '}';
     }
 }

@@ -33,8 +33,12 @@ public class OrderServiceImpl implements OrderService {
 
     @Override
     @KafkaListener(topics = "cooked_order")
-    public void acceptOrder(String msg) {
-        System.out.println("Status order: " + msg);
+    public void acceptOrder(Order msg) {
+        Order order = getById(msg.getId()).orElse(null);
+        if (order != null) {
+            order.setStatusOrder(msg.getStatusOrder());
+            orderRepository.save(order);
+        }
     }
 
     @Override
